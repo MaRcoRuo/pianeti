@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* permanent-marker-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Permanent Marker";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/permanent/permanent-marker-v16-latin-regular.woff2")
+      format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../../assets/fonts/permanentpermanent-marker-v16-latin-regular.ttf")
+      format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+body {
+  background-color: #000014;
+  margin: 0;
+}
+
+.nome_pagina {
+  width: 100%;
+  background-color: #1e3e62;
+  height: 120px;
+}
+
+.nome_pagina h1 {
+  color: #ff8225;
+  font-size: 50px;
+  text-align: center;
+  padding: 30px 0;
+  font-family: "Permanent Marker";
+}
+
+.descrizione_container {
+  width: 1200px;
+  background-color: #eb5b00;
+  display: flex;
+  flex-direction: column;
+  margin: 28px;
+  padding: 15px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_sistema {
+  font-size: 30px;
+  text-align: center;
+}
+
+.descrizione_sistema_solare {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 16px;
+  align-self: flex-start;
+  padding: 10px;
+}
+
+.container_pianeti {
+  /* border: 1px solid black; */
+  /* width: 300px; */
+  width: calc(25% - 25px);
+  display: inline-block;
+  margin: 10px;
+  height: 100%;
+  vertical-align: top;
+}
+
+.container_pianeti h2 {
+  background-color: #56021f;
+  color: #00eaff;
+  padding: 10px 0;
+  font-size: 30px;
+  margin: 0;
+  text-align: center;
+  height: 50px;
+  /* border: 1px solid black; */
+}
+
+.card_description {
+  background-color: #000014;
+  color: #e0e0e0;
+  padding: 5px;
+  font-size: 15px;
+  /* border: 1px solid #888888; */
+  height: 513px;
+}
+
+.info_pianeti {
+  text-align: center;
+  color: #eb5b00;
+  font-size: 20px;
+}
+
+footer {
+  width: 1200px;
+  background-color: #eb5b00;
+  display: flex;
+  flex-direction: column;
+  margin: 28px;
+  padding: 15px;
+  border-radius: 15px;
+  align-items: left;
+  justify-content: center;
+}
