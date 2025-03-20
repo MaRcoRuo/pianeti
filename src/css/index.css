@@ -17,15 +17,27 @@
       format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   width: 100vw;
-  background-color: #ffffff;
+  background-color: #8bc0f2;
   margin: 0;
 }
 
 .nome_pagina {
   width: 100vw;
-  background-color: #1e3e62;
+  background: radial-gradient(
+      circle at top left,
+      yellow,
+      orange,
+      transparent 20%
+    ),
+    radial-gradient(circle at top right, yellow, orange, transparent 20%),
+    #1e3e62; /* Colore di sfondo dell'header */
+  position: relative;
   height: 120px;
 }
 
@@ -46,7 +58,7 @@ body {
   display: block;
   margin: 28px;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 20px;
   align-items: center;
   justify-content: center;
 }
@@ -64,17 +76,25 @@ body {
   padding: 10px;
 }
 
-.container_wrapper {
+/* .container_wrapper {
   width: 100%;
-  overflow: hidden; /* Previene problemi con float */
-  min-width: 850px; /* Impedisce che gli elementi si accavallino */
+  overflow: hidden; Previene problemi con float
+  min-width: 850px; Impedisce che gli elementi si accavallino
+} */
+
+.container_wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Permette il ridimensionamento senza problemi */
+  justify-content: space-evenly; /* Distribuisce le card equamente */
+  align-items: stretch; /* Fa sì che tutte le card abbiano la stessa altezza */
 }
 
 .container_pianeti {
+  display: flex;
+  flex-direction: column; /* Mantiene il contenuto ben distribuito */
   width: calc(25% - 25px);
-  float: left; /* Allinea gli elementi a sinistra */
   margin: 10px;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .container_pianeti h2 {
@@ -85,6 +105,7 @@ body {
   margin: 0;
   text-align: center;
   height: 50px;
+  border-radius: 20px 20px 0 0;
 }
 
 /* Cambio colore solo se il cursore è sopra il div card_description */
@@ -95,10 +116,11 @@ body {
 
 .card_description {
   background-color: #000014;
+  flex-grow: 1; /* Riempie lo spazio rimanente, mantenendo l'altezza uniforme */
   color: #e0e0e0;
   padding: 5px;
   font-size: 1rem;
-  min-height: 513px;
+  border-radius: 0 0 20px 20px;
 }
 
 /* Clearfix migliorato per evitare problemi */
